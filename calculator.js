@@ -1,31 +1,21 @@
-// use strict
+// 'use strict;'
 
- 
-function numPressed(num) {
-  //  var alertMessage = "You clicked the " + num + " button";
-  //  alert(alertMessage);
-    updateDisplay(num);
+var calculatorState = {
+  currentValue: '',
+  previousValue: '',
+  pendingOperation: ''
+};
+
+window.calculatorApp = {
+  clickDigit: function(digit) {
+    display.value = digit;
+  },
+  clickDecimal: function() {
+  },
+  clickOperator: function(op) {
+    alert('op clicked: ' + op)
+  },
+  clickEquals: function() {
+    alert('equals clicked')
+  }
 }
-
-function updateDisplay(num) {
-     if( document.getElementById("display").value == "0.") {
-        document.getElementById("display").value = num;
-     } else {
-         document.getElementById("display").value += num;
-     }
-
-}
-
-function clearNumbers() {
-
-    document.getElementById("display").value = "0.";
-}
-
-function addOperator(num) {
- document.getElementById("display").value += num;
-}
-           
- 
-
-
-    
